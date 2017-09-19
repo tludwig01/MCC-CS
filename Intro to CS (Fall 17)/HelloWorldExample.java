@@ -9,9 +9,8 @@ class Hello {
 
     message = "Hello World!";
 
-    System.out.println(message);
-    System.out.println("Can also output directly");
-    
+
+
     int number;
     number = 5;
     int value = 15;
@@ -21,11 +20,15 @@ class Hello {
     char letter = 'r';
     int money;
     money = 10;
+
+    Date today = new Date();
     
-    Date today;
-    
-    
+    System.out.println(today);
+    System.out.println(message);
+    System.out.println("Can also output directly");
+
+
   } // end main method
-} //end class Hello 
+} //end class Hello
 
 // End code
