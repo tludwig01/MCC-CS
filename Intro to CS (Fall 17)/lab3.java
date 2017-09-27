@@ -19,7 +19,7 @@ class outputPractice {
 class outputPracticeTwo {
     public static void main(String[] args) {
 
-      String word = "My programming teacher is awesome";
+      String word = "My programming teacher is awesome"; //variables versus straight System.println
       Double decimal = 10.5;
       int number = 100;
 
@@ -86,7 +86,7 @@ class outputPracticeFive {
       faveLyric = scanner.next();
       System.out.println();
 
-      System.out.println("Your favorite color is: " + faveLyric);
+      System.out.println("Your favorite song lyric is: " + faveLyric);
   }
 }
 
