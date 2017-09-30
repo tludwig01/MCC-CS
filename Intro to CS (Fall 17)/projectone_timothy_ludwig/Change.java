@@ -1,3 +1,7 @@
+// Tim Ludwig
+// JAVA PROJECT ONE
+// CSC 101 - FALL 2017
+
 import java.util.Scanner;
 import java.lang.Math;
 import java.text.DecimalFormat;
