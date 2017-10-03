@@ -2,6 +2,13 @@
 // JAVA PROJECT ONE
 // CSC 101 - FALL 2017
 
+//This is a string play program!
+//Users will be prompted to enter a phrase of their choosing and the program will do the following:
+//1) locate the first 'e' character in the string
+//2) the full string length (amount of characters)
+//3) remove the FIRST and LAST characters from the strong
+//4) display the middle character of the phrase
+
 import java.util.*;
 import java.lang.*;
 import java.text.*;
@@ -15,11 +22,13 @@ class MiddleLetter {
     int stringLength;
 
     scanner.useDelimiter(System.getProperty("line.separator"));
-
+    //Welcome message introducing the program
     System.out.println("We're going to play with words here. Start thinking of your favorite phrase, saying, or quote!");
-
+    //User input prompt
     System.out.println("Enter your phrase below: ");
     phrase = scanner.next();
+    //display user input
+    System.out.println("You've entered: " + phrase);
 
     letterE = new String("e");
     stringLength = phrase.length(); //Character length

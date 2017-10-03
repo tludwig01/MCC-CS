@@ -2,6 +2,8 @@
 // JAVA PROJECT ONE
 // CSC 101 - FALL 2017
 
+//Program to solve the quadratic equation with prompts for user input variables! 
+
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
@@ -47,7 +49,7 @@ class Quadratic {
 
     //Prints answer two
     System.out.println("Your second answer is: " + twoPlaces.format(answerTwo));
-    
+
     //Goodbye message
     System.out.println("See, Math is easy when Java does it for you. Thanks for dropping by!");
   }

@@ -2,6 +2,8 @@
 // JAVA PROJECT ONE
 // CSC 101 - FALL 2017
 
+//Program calculating change after a transaction. It breaks the change down in to denominations of ones, quarters, dimes, nickels, and pennies.
+
 import java.util.Scanner;
 import java.lang.Math;
 import java.text.DecimalFormat;
@@ -17,10 +19,12 @@ class Change {
     //User input item cost as a double
     System.out.println("Enter cost of items here (e.g. 5.37): ");
     double productCost = scanner.nextDouble();
+    System.out.println("You owe: $" + twoPlaces.format(productCost));
 
     //User inputs cashGiven. ASSUMED to be MORE than productCost
     System.out.println("Okay, how much are you paying with? Enter here (e.g. 15.24): ");
     double cashGiven = scanner.nextDouble();
+    System.out.println("You've paid with: $" + twoPlaces.format(cashGiven));
 
     //Calculates total change and displays message
     double change = cashGiven - productCost;
