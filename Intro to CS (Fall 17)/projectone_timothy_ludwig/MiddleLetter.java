@@ -10,8 +10,6 @@
 //4) display the middle character of the phrase
 
 import java.util.*;
-import java.lang.*;
-import java.text.*;
 
 class MiddleLetter {
   public static void main(String[] args) {
