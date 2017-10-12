@@ -39,7 +39,7 @@ class Quadratic {
     double answerOne = (-numB + Math.sqrt(Math.pow(numB, 2)- (4 * numA * numC))) / (2 *numA);
 
     //Solves second answer in equation
-    double answerTwo = (-numB - Math.sqrt(Math.pow(numB, 4) - (4 * numA * numC)));
+    double answerTwo = (-numB - Math.sqrt(Math.pow(numB, 2) - (4 * numA * numC))) / (2 * numA);
 
     //Prints whole equation, showing user input numbers
     System.out.println("You've entered the equation as: " + twoPlaces.format(numA) + "*x^2 + " + twoPlaces.format(numB) + "*x + " + twoPlaces.format(numC) + " = 0");
