@@ -40,7 +40,7 @@ def max (firstInt, secondInt):
         print("The larger number is: ")
         print(secondInt)
 
-# main()
+main()
 
 
 # Problem 17/18
@@ -48,9 +48,11 @@ import math
 
 def main_two():
     print("Welcome to Prime Check!")
-    print("Primes in range are: ")
+    print("============================")
+    prime_check()
+    print("Now it's time to fnid primes in a given range!")
+    print("============================")
     prime_range()
-    print("End Prime Check program.")
 
 #single variable Prime checking function
 def prime_check():
@@ -59,19 +61,28 @@ def prime_check():
     for i in range(2, numCheck):
         if numCheck % i == 0:
             prime = False
+            print(numCheck, "is not a Prime number.")
+
 
     if prime == True:
         print(numCheck, "is a Prime number.")
     else:
         print(numCheck, "is not a Prime number.")
 
-
+#User input prime range function
 def prime_range():
-    for i in range(2, numCheck):
-        if prime_check(numCheck):
-            if numCheck==i:
-                print(numCheck)
 
+    startValue = int(input("Enter a number greater than 1: "))
+    endValue = int(input("Enter another number greater than the first: "))
 
-prime_range()
-# main_two()
+    print("Primes between", startValue, "and", endValue, "are: ")
+
+    for num in range(startValue, endValue):
+        if num > 1:
+            for i in range(2, num):
+                if num % i == 0:
+                    break
+            else:
+                print(num)
+
+main_two()
