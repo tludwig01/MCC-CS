@@ -1,0 +1,16 @@
+Project One - Python PIG
+Timothy Ludwig
+CPT 101
+Pseudocode Plan
+
+#####################################
+
+My program begins with the hello() function. It welcomes the player to the game PIG, briefly explains the rules of play, then asks a prompt. If they're ready, the game executes. If they decide they're not prepared, the program calls them a "coward" and ends. It doesn't even thank them for playing.
+
+When the user enter's "Y" at the readiness prompt in hello(), the conditional statement then executes the main() function.
+
+Once main() is initiated, the first function called within main() is the check_winner() function. This function does two things:
+
+1) It checks and declares if the game is over (if either human or computer is crossed the 100 point threshold).
+
+2) If the game is not over, it displays the running total score for each side before either player's turn.
