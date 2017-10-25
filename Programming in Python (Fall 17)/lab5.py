@@ -113,42 +113,30 @@
 #5.36
 #angle = math.radians(45)
 
-
+import math
 
 #Problem 12
 def main ():
     print("Welcome!")
     read_two()
     print("==============LINE BREAK================")
-    print("Let's find the max of two numbers!")
-    max(12, 34)
-    print("End max function.")
 
 def read_two():
     firstInt = int(input("Enter a number: "))
     secondInt = int(input("Enter a second number: "))
     print("User entered", firstInt, "and", secondInt)
-    print("End read_two function.")
-
-def max (firstInt, secondInt):
-    if firstInt > secondInt:
-        print("The larger number is: ")
-        print(firstInt)
-    else:
-        print("The larger number is: ")
-        print(secondInt)
+    print("The larger number is: ", max(firstInt, secondInt))
 
 main()
 
 
-# Problem 17/18
-import math
+# Problem 17/1
 
 def main_two():
     print("Welcome to Prime Check!")
     print("============================")
     prime_check()
-    print("Now it's time to fnid primes in a given range!")
+    print("Now it's time to find primes in a given range!")
     print("============================")
     prime_range()
 
@@ -160,7 +148,6 @@ def prime_check():
         if numCheck % i == 0:
             prime = False
             print(numCheck, "is not a Prime number.")
-
 
     if prime == True:
         print(numCheck, "is a Prime number.")

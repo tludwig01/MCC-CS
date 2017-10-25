@@ -31,18 +31,36 @@
 #Opening a file connects a file and a program and file object.
 
 #6.9
+#Closing a file disconnects the program from the file.
 
 #6.10
+#Read position marks the location of the next item that will be read from a file. When an input file is open its read position is initially set to the first item of the file.
 
 #6.11
+# Open file in append mode. When in append mode data is written to the end of the file's existing contents.
 
 #6.12
+# outfile = open("numbers.txt", "w")
+# for num in range(1, 11):
+#     outfile.write(str(num) + "\n")
+# outfile.close()
 
 #6.13
+#Readline method returns an empty string when it has attempted to read beyond the end of the file.
 
 #6.14
+# infile = open("numbers.txt", "r")
+# line = infile.readline()
+# while line != " ":
+#     print(line)
+#     line = infile.readline()
+# infile.close()
 
 #6.15
+# infile = open("data.txt", "r")
+# for line in infile:
+#     print(line)
+# infile.close()
 
 #6.16
 
@@ -62,31 +80,32 @@
 
 def main ():
 
-    outfile = open("golf.txt", "w")
+    outfile = open("golf.txt", "a")
 
     name = str(input("Enter player name here: "))
     score = int(input("Enter golf score here: "))
 
-    outfile.write("Name: " + name + "\n")
+    outfile.write("Name: " + name)
     outfile.write("Score: " + str(score))
 
     outfile.close()
     print("Name and score added.")
-
-
-# main()
+    main_two()
 
 def main_two():
 
     infile = open("golf.txt", "r")
-
-    file_contents = infile.read()
+    moreNames = "N"
+    file_contents = infile.readline()
 
     infile.close()
+    moreNames = str(input("Would you like to add more names/scores? (Y/N)"))
+    while moreNames == "Y":
+        main()
+    else:
+        print(file_contents)
 
-    print(file_contents)
-
-# main_two()
+main()
 
 ########################################
 import math
@@ -99,9 +118,9 @@ def stepCounter ():
 
     for line in range(1, 31, +1):
         print(int(stepsFile.readline()) + totalSteps)
-        
+
 
 
     stepsFile.close()
 
-stepCounter()
+# stepCounter()
