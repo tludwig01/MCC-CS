@@ -79,18 +79,20 @@
 #################################################
 
 def main ():
+    try:
+        outfile = open("golf.txt", "a")
+        name = str(input("Enter player name here: "))
+        score = int(input("Enter golf score here: "))
 
-    outfile = open("golf.txt", "a")
+        outfile.write("Name: " + str(name) + " ")
+        outfile.write("Score: " + str(score) + " ")
 
-    name = str(input("Enter player name here: "))
-    score = int(input("Enter golf score here: "))
-
-    outfile.write("Name: " + name)
-    outfile.write("Score: " + str(score))
-
-    outfile.close()
-    print("Name and score added.")
-    main_two()
+        outfile.close()
+        print("Name and score added.")
+        main_two()
+    except ValueError:
+        print("Must enter valid numeric score. Player not recorded.")
+        main()
 
 def main_two():
 
@@ -99,14 +101,15 @@ def main_two():
     file_contents = infile.readline()
 
     infile.close()
+
     moreNames = str(input("Would you like to add more names/scores? (Y/N)"))
-    while moreNames == "Y":
+
+    if moreNames == "Y":
         main()
     else:
         print(file_contents)
 
-main()
-
+# main()
 ########################################
 import math
 
@@ -116,11 +119,23 @@ def stepCounter ():
 
     totalSteps = 0
 
-    for line in range(1, 31, +1):
-        print(int(stepsFile.readline()) + totalSteps)
+    for line in stepsFile: #range(0, 31, +1):
+        # print(int(stepsFile.readline()) + totalSteps)
+        line = int(line.rstrip("\n"))
+        totalSteps += line
+        print(line)
+    print("January's total steps is: ", totalSteps)
+
 
 
 
     stepsFile.close()
 
-# stepCounter()
+stepCounter()
+    # count = 0
+    # for line in stepsFile:
+    #     steps = int(line)
+    #     count = count + steps
+    #     avg = count / 365
+    # print(count, "steps taken this year!")
+    # print("That's about", round(avg), "steps each day!")
