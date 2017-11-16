@@ -63,18 +63,25 @@
 # infile.close()
 
 #6.16
+# a record is a complete set of data that describes ont item, a field is a single piece of data within a record.
 
 #6.17
+#copy all the original files' records to the temp file, but when you to the record to be modified, you don't write the old contents to the temp file. You write its new, modified values to the temp file. Then you finish copying remaining records from the original file to the temp file.
 
 #6.18
+# copy all the original file's records to the temp file, except for the record that is to be deleted. The temp file takes the place of the original. You delete the original file and rename the temp file, giving it the name that the original had on the computer's disk.
 
 #6.19
+#exceptions are errors that occur while a program is running. IN most cases an exception causes a program to halt.
 
 #6.20
+# The program halts.
 
 #6.21
+# IOError
 
 #6.22
+# ValueError
 
 #################################################
 
@@ -119,23 +126,14 @@ def stepCounter ():
 
     totalSteps = 0
 
-    for line in stepsFile: #range(0, 31, +1):
-        # print(int(stepsFile.readline()) + totalSteps)
+    for line in stepsFile:
         line = int(line.rstrip("\n"))
         totalSteps += line
+        avg = totalSteps/ 365
         print(line)
-    print("January's total steps is: ", totalSteps)
-
-
-
+    print("Steps this year: ", totalSteps)
+    print("Average steps per day: ", round(avg))
 
     stepsFile.close()
 
 stepCounter()
-    # count = 0
-    # for line in stepsFile:
-    #     steps = int(line)
-    #     count = count + steps
-    #     avg = count / 365
-    # print(count, "steps taken this year!")
-    # print("That's about", round(avg), "steps each day!")

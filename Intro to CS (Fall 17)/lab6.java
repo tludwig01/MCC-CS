@@ -61,7 +61,7 @@ class PrimeNumber {
 
 class FibonacciNumbers {
   public static void main(String[] args) {
-    int num=1, num2=1, num3;
+    int num=1, num2=1, num3=1;
 
     Scanner scanner = new Scanner(System.in);
 

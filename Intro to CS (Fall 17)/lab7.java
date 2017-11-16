@@ -51,7 +51,7 @@ class EstimateMath {
     return subtract;
   }//end estimateSubtract
 
-}//end class
+}//end class EstimateMath
 
 class EstimateMathMain {
   public static void main(String[] args) {

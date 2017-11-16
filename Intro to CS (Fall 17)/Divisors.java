@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Divisors {
   public static void main(String[] args) {
     Scanner type = new Scanner(System.in);
